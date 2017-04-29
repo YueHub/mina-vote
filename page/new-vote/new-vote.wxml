@@ -1,0 +1,15 @@
+<import src="../common/head.wxml"/>
+<import src="../common/foot.wxml"/>
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">Local Image</view>
+      <view class="page-section-ctn">
+        <image class="image" src="../index/resources/pic/1.jpg"/>
+      </view>
+    </view>
+  </view>
+   <button type="primary" bindtap="newVote">新建投票</button>
+  <template is="foot"/>
+</view>
