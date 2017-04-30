@@ -1,4 +1,69 @@
 Page({
+  // data
+  data: {
+      // swiper
+      activities:['../resources/pic/1.jpg', '../resources/pic/2.jpg', '../resources/pic/1.jpg'],
+      indicatorDots: true,
+      vertical: false,
+      autoplay: true,
+      interval: 2000,
+      duration: 500,
+
+      // list 
+      list: [
+        {
+          id: 'view',
+          title: '课程名称/老师',
+          content: 'xxxxxxxxx',
+          otherInfo: '其它的什么信息',
+          open: false,
+          pages: ['view', 'scroll-view', 'swiper']
+        }, {
+          id: 'view',
+          title: '课程名称/老师',
+          content: 'yyyyyyyyyyyyyyy',
+          otherInfo: '其它的什么信息',
+          open: false,
+          pages: ['view', 'scroll-view', 'swiper']
+        },{
+          id: 'view',
+          title: '课程名称/老师',
+          content: 'zzzzzzzzzzzzzzz',
+          otherInfo: '其它的什么信息',
+          open: false,
+          pages: ['view', 'scroll-view', 'swiper']
+        }
+      ],
+
+      // 模态
+      array: ['中国', '美国', '巴西', '日本'],
+      inputShowed: false,
+      inputVal: "",
+  }, 
+
+
+  // swiper
+  changeIndicatorDots: function (e) {
+    this.setData({
+      indicatorDots: !this.data.indicatorDots
+    })
+  },
+  changeAutoplay: function (e) {
+    this.setData({
+      autoplay: !this.data.autoplay
+    })
+  },
+  intervalChange: function (e) {
+    this.setData({
+      interval: e.detail.value
+    })
+  },
+  durationChange: function (e) {
+    this.setData({
+      duration: e.detail.value
+    })
+  },
+
 // 模态
 powerDrawer: function (e) {
     var currentStatu = e.currentTarget.dataset.statu;
@@ -72,55 +137,7 @@ powerDrawer: function (e) {
     })
   },
 
-    data: {
-        array: ['中国', '美国', '巴西', '日本'],
-        inputShowed: false,
-        inputVal: "",
-        // swiper
-        background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
-        indicatorDots: true,
-        vertical: false,
-        autoplay: true,
-        interval: 2000,
-        duration: 500,
-        // list 
-        list: [
-      {
-        id: 'view',
-        name: '视图容器',
-        open: false,
-        pages: ['view', 'scroll-view', 'swiper']
-      }, {
-        id: 'content',
-        name: '基础内容',
-        open: false,
-        pages: ['text', 'icon', 'progress']
-      }, {
-        id: 'form',
-        name: '表单组件',
-        open: false,
-        pages: ['button', 'checkbox', 'form', 'input', 'label', 'picker', 'radio', 'slider', 'switch', 'textarea']
-      }, {
-        id: 'nav',
-        name: '导航',
-        open: false,
-        pages: ['navigator']
-      }, {
-        id: 'media',
-        name: '媒体组件',
-        open: false,
-        pages: ['image', 'audio', 'video']
-      }, {
-        id: 'map',
-        name: '地图',
-        pages: ['map']
-      }, {
-        id: 'canvas',
-        name: '画布',
-        pages: ['canvas']
-      }
-    ],
-    },
+    
      kindToggle: function (e) {
     var id = e.currentTarget.id, list = this.data.list;
     for (var i = 0, len = list.length; i < len; ++i) {
@@ -157,27 +174,7 @@ powerDrawer: function (e) {
         });
     },
 
-    // swiper
-  changeIndicatorDots: function (e) {
-    this.setData({
-      indicatorDots: !this.data.indicatorDots
-    })
-  },
-  changeAutoplay: function (e) {
-    this.setData({
-      autoplay: !this.data.autoplay
-    })
-  },
-  intervalChange: function (e) {
-    this.setData({
-      interval: e.detail.value
-    })
-  },
-  durationChange: function (e) {
-    this.setData({
-      duration: e.detail.value
-    })
-  },
+    
   // 模态
   modalTap: function(e) {
     wx.showModal({
