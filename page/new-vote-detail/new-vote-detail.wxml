@@ -1,7 +1,6 @@
 <view class="page">
     <view class="page__hd">
-        <view class="page__title">Preview</view>
-        <view class="page__desc">表单预览</view>
+        <view class="page__desc">大数据与云计算</view>
     </view>
     <view class="page__bd">
         <view class="weui-form-preview">
@@ -13,44 +12,18 @@
             </view>
             <view class="weui-form-preview__bd">
                 <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">商品</view>
-                    <view class="weui-form-preview__value">电动打蛋机</view>
+                    <view class="weui-form-preview__label">纯干货</view>
                 </view>
                 <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">标题标题</view>
-                    <view class="weui-form-preview__value">名字名字名字</view>
+                    <view class="weui-form-preview__label">给分高</view>
                 </view>
                 <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">标题标题</view>
-                    <view class="weui-form-preview__value">很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字</view>
+                    <view class="weui-form-preview__label">实践性强</view>
                 </view>
             </view>
+            <text>填写评价：</text><input/>
             <view class="weui-form-preview__ft">
-                <navigator url="" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">操作</navigator>
-            </view>
-        </view>
-        <view class="weui-form-preview">
-            <view class="weui-form-preview__hd">
-                <view class="weui-form-preview__label">付款金额</view>
-                <view class="weui-form-preview__value_in-hd">¥2400.00</view>
-            </view>
-            <view class="weui-form-preview__bd">
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">商品</view>
-                    <view class="weui-form-preview__value">电动打蛋机</view>
-                </view>
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">标题标题</view>
-                    <view class="weui-form-preview__value">名字名字名字</view>
-                </view>
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">标题标题</view>
-                    <view class="weui-form-preview__value">很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字</view>
-                </view>
-            </view>
-            <view class="weui-form-preview__ft">
-                <navigator class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active">辅助操作</navigator>
-                <navigator class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">操作</navigator>
+                <navigator url="" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">新增评价</navigator>
             </view>
         </view>
     </view>
@@ -61,15 +34,38 @@
       <view class="page-section-title">推荐展示样式</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_switch">
-          <view class="weui-cell__bd">开启中</view>
+          <view class="weui-cell__bd">红包奖励</view>
           <view class="weui-cell__ft">
             <switch checked />
           </view>
         </view>
         <view class="weui-cell weui-cell_switch">
-          <view class="weui-cell__bd">关闭</view>
+          <view class="weui-cell__bd">截止日期</view>
           <view class="weui-cell__ft">
-            <switch />
+
+          
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+               
+                <view class="weui-cell__bd">
+                    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+                    <view class="weui-input">日期：{{date}}</view>
+                    </picker>
+                </view>
+                </view>
+            </view>
+
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                
+                <view class="weui-cell__bd">
+                    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+                    <view class="weui-input">时间：{{time}}</view>
+                    </picker>
+                </view>
+                </view>
+            </view>
+
           </view>
         </view>
       </view>

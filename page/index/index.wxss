@@ -41,10 +41,19 @@
   height: 14px;
 }
 
-
-
-
-
+.college-btn {
+  position: fixed;
+  bottom: 0rpx;
+  width: 50px;
+  height: 50px;
+  padding: 0rpx 0;
+  border-radius: 50rpx 50rpx;
+  text-align: center;
+  line-height:50px;
+  margin: 40rpx 80%;
+  background: #494949;
+  color: #fff;
+}
 
 button{
   margin-bottom: 30rpx;
@@ -71,16 +80,6 @@ button:last-child{
 }
 
 /* 模态 */
-/*button*/
-.btn {
-  width: 80%;
-  padding: 20rpx 0;
-  border-radius: 10rpx;
-  text-align: center;
-  margin: 40rpx 10%;
-  background: #000;
-  color: #fff;
-}
 
 /*mask*/
 .drawer_screen {

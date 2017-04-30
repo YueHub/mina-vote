@@ -1,7 +1,11 @@
 {
   "pages": [
-    
+    "page/component/index",
+
+
     "page/index/index",
+    "page/index-class-select-main/index-class-select-main",
+    "page/vote-graph/vote-graph",
     "page/new-vote/new-vote",
     "page/new-vote-detail/new-vote-detail",
     "page/home-page/home-page",
@@ -120,7 +124,7 @@
       "text": "接口"
     },
      {
-      "pagePath": "page/API/index",
+      "pagePath": "page/component/index",
       "iconPath": "image/icon_API.png",
       "selectedIconPath": "image/icon_API_HL.png",
       "text": "组件"

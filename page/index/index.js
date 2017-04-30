@@ -1,16 +1,16 @@
 Page({
   // data
   data: {
-      // swiper
-      activities:['../resources/pic/1.jpg', '../resources/pic/2.jpg', '../resources/pic/1.jpg'],
-      indicatorDots: true,
-      vertical: false,
-      autoplay: true,
-      interval: 2000,
-      duration: 500,
+    // swiper
+    activities:['../resources/activities/activity-1.jpg', '../resources/activities/activity-2.jpg', '../resources/activities/activity-3.jpg', '../resources/activities/activity-4.jpg'],
+    indicatorDots: true,
+    vertical: false,
+    autoplay: true,
+    interval: 2000,
+    duration: 500,
 
-      // list 
-      list: [
+    // list 
+    list: [
         {
           id: 'view',
           title: '课程名称/老师',
@@ -36,9 +36,10 @@ Page({
       ],
 
       // 模态
-      array: ['中国', '美国', '巴西', '日本'],
-      inputShowed: false,
-      inputVal: "",
+    colleges: ['软件与微电子学院', '数学学院', '物理学院'],
+    majors: ['大数据与云计算', '软件工程技术', '机器学习'],
+    inputShowed: false,
+    inputVal: "",
   }, 
 
 
@@ -64,10 +65,34 @@ Page({
     })
   },
 
-// 模态
-powerDrawer: function (e) {
+  // search 
+  showInput: function () {
+      this.setData({
+        inputShowed: true
+      });
+  },
+  hideInput: function () {
+      this.setData({
+          inputVal: "",
+          inputShowed: false
+      });
+  },
+  clearInput: function () {
+    this.setData({
+          inputVal: ""
+      });
+  },
+  inputTyping: function (e) {
+      this.setData({
+          inputVal: e.detail.value
+      });
+  },
+
+
+  // 模态
+  powerDrawer: function (e) {
     var currentStatu = e.currentTarget.dataset.statu;
-    this.util(currentStatu)
+    this.util(currentStatu);
   },
   util: function(currentStatu){
     /* 动画部分 */
@@ -77,7 +102,7 @@ powerDrawer: function (e) {
       timingFunction: "linear", //线性
       delay: 0  //0则不延迟
     });
-    
+      
     // 第2步：这个动画实例赋给当前的动画实例
     this.animation = animation;
 
@@ -88,7 +113,7 @@ powerDrawer: function (e) {
     this.setData({
       animationData: animation.export()
     })
-    
+      
     // 第5步：设置定时器到指定时候后，执行第二组动画
     setTimeout(function () {
       // 执行第二组动画
@@ -97,7 +122,7 @@ powerDrawer: function (e) {
       this.setData({
         animationData: animation
       })
-      
+
       //关闭
       if (currentStatu == "close") {
         this.setData(
@@ -105,9 +130,14 @@ powerDrawer: function (e) {
             showModalStatus: false
           }
         );
+        // 跳转到选课主页
+        wx.navigateTo({
+          url: '../index-class-select-main/index-class-select-main'
+        });
+        
       }
     }.bind(this), 200)
-  
+    
     // 显示
     if (currentStatu == "open") {
       this.setData(
@@ -118,27 +148,21 @@ powerDrawer: function (e) {
     }
   },
 
-
-// picker
-  bindPickerChange: function(e) {
+  // picker
+  bindCollegePickerChange: function(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      index: e.detail.value
+      collegeIndex: e.detail.value
     })
   },
-  bindDateChange: function(e) {
+  bindMajorPickerChange: function(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      date: e.detail.value
-    })
-  },
-  bindTimeChange: function(e) {
-    this.setData({
-      time: e.detail.value
+      majorIndex: e.detail.value
     })
   },
 
-    
-     kindToggle: function (e) {
+  kindToggle: function (e) {
     var id = e.currentTarget.id, list = this.data.list;
     for (var i = 0, len = list.length; i < len; ++i) {
       if (list[i].id == id) {
@@ -151,30 +175,7 @@ powerDrawer: function (e) {
       list: list
     });
   },
-  
-    showInput: function () {
-        this.setData({
-            inputShowed: true
-        });
-    },
-    hideInput: function () {
-        this.setData({
-            inputVal: "",
-            inputShowed: false
-        });
-    },
-    clearInput: function () {
-        this.setData({
-            inputVal: ""
-        });
-    },
-    inputTyping: function (e) {
-        this.setData({
-            inputVal: e.detail.value
-        });
-    },
 
-    
   // 模态
   modalTap: function(e) {
     wx.showModal({
@@ -190,5 +191,12 @@ powerDrawer: function (e) {
       confirmText: "确定",
       cancelText: "取消"
     })
+  },
+  
+  // noteGraph
+  noteGraph: function(e) {
+    wx.navigateTo({
+      url: '../vote-graph/vote-graph'
+    });
   }
 });
