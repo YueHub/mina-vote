@@ -1,27 +1,18 @@
 <view class="page">
-    <view class="page__hd">
-        <view class="page__desc">大数据与云计算</view>
-    </view>
+    
     <view class="page__bd">
         <view class="weui-form-preview">
             <view class="weui-form-preview__hd">
                 <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">付款金额</view>
-                    <view class="weui-form-preview__value_in-hd">¥2400.00</view>
+                    <view class="weui-form-preview__label">课程名称/老师:</view>
+                    <view class="weui-form-preview__value_in-hd"><input style="border:1px;" type="text"/></view>
                 </view>
             </view>
             <view class="weui-form-preview__bd">
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">纯干货</view>
                 </view>
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">给分高</view>
-                </view>
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">实践性强</view>
-                </view>
             </view>
-            <text>填写评价：</text><input/>
             <view class="weui-form-preview__ft">
                 <navigator url="" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">新增评价</navigator>
             </view>

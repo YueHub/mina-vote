@@ -1,108 +1,61 @@
-Page({
-    data: {
-        inputShowed: false,
-        inputVal: "",
-        // swiper
-        background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
-        indicatorDots: true,
-        vertical: false,
-        autoplay: true,
-        interval: 2000,
-        duration: 500,
-        // list 
-        list: [
-      {
-        id: 'view',
-        name: '视图容器',
-        open: false,
-        pages: ['view', 'scroll-view', 'swiper']
-      }, {
-        id: 'content',
-        name: '基础内容',
-        open: false,
-        pages: ['text', 'icon', 'progress']
-      }, {
-        id: 'form',
-        name: '表单组件',
-        open: false,
-        pages: ['button', 'checkbox', 'form', 'input', 'label', 'picker', 'radio', 'slider', 'switch', 'textarea']
-      }, {
-        id: 'nav',
-        name: '导航',
-        open: false,
-        pages: ['navigator']
-      }, {
-        id: 'media',
-        name: '媒体组件',
-        open: false,
-        pages: ['image', 'audio', 'video']
-      }, {
-        id: 'map',
-        name: '地图',
-        pages: ['map']
-      }, {
-        id: 'canvas',
-        name: '画布',
-        pages: ['canvas']
-      }
-    ],
-    },
-     kindToggle: function (e) {
-    var id = e.currentTarget.id, list = this.data.list;
-    for (var i = 0, len = list.length; i < len; ++i) {
-      if (list[i].id == id) {
-        list[i].open = !list[i].open
-      } else {
-        list[i].open = false
-      }
-    }
-    this.setData({
-      list: list
-    });
-  },
-  
-    showInput: function () {
-        this.setData({
-            inputShowed: true
-        });
-    },
-    hideInput: function () {
-        this.setData({
-            inputVal: "",
-            inputShowed: false
-        });
-    },
-    clearInput: function () {
-        this.setData({
-            inputVal: ""
-        });
-    },
-    inputTyping: function (e) {
-        this.setData({
-            inputVal: e.detail.value
-        });
-    },
 
-    // swiper
-  changeIndicatorDots: function (e) {
+
+var app = getApp()
+
+const formData = {
+  address: 'T.I.T 造舰厂',
+  time: '2017.01.09',
+  name: '帝国歼星舰',
+  serial: '123456789'
+}
+
+Page({
+  onLoad: function() {
     this.setData({
-      indicatorDots: !this.data.indicatorDots
+      formData
     })
   },
-  changeAutoplay: function (e) {
-    this.setData({
-      autoplay: !this.data.autoplay
+
+  submitForm: function(e) {
+    var self = this
+    var form_id = e.detail.formId
+    var formData = e.detail.value
+
+    console.log('form_id is:', form_id)
+
+    self.setData({
+      loading: true
     })
-  },
-  intervalChange: function (e) {
-    this.setData({
-      interval: e.detail.value
-    })
-  },
-  durationChange: function (e) {
-    this.setData({
-      duration: e.detail.value
+
+    app.getUserOpenId(function(err, openid) {
+      if (!err) {
+        wx.request({
+          url: templateMessageUrl,
+          method: 'POST',
+          data: {
+            form_id,
+            openid,
+            formData
+          },
+          success: function(res) {
+            console.log('submit form success', res)
+            wx.showToast({
+              title: '发送成功',
+              icon: 'success'
+            })
+            self.setData({
+              loading: false
+            })
+          },
+          fail: function({errMsg}) {
+            console.log('submit form fail, errMsg is:', errMsg)
+          }
+        })
+      } else {
+        console.log('err:', err)
+      }
     })
   }
-    
-});
+})
+
+

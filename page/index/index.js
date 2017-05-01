@@ -1,6 +1,163 @@
+
 Page({
   // data
   data: {
+    // courses
+    courses: [
+          {
+              "courseNo" : "001",
+              "courseName" : "用户体验设计/陈妍",
+              "courseDesc" : "腾讯传奇部门CDC倾情传授",
+              "courseType" : "艺术课",
+              "courseScore" : "9.5",
+              "evaluation" : [ 
+                  {
+                      name : "纯干货",
+                      data : 90,
+                  }, 
+                  {
+                      
+                      name : "给分高",
+                      data : 95,
+                  }, 
+                  {
+                      name : "实践性",
+                      data : 100,
+                  }, 
+                  {
+                      name : "签到少",
+                      data : 666,
+                  }
+              ]
+          }, {
+              "courseNo" : "002",
+              "courseName" : "动漫欣赏与实践/王伟",
+              "courseDesc" : "教你学会动漫欣赏",
+              "courseType" : "艺术课",
+              "courseScore" : 9.4,
+              "evaluation" : [ 
+                  {
+                      name : "纯干货",
+                      data : 85,
+                  }, 
+                  {
+                      
+                      name : "给分高",
+                      data : 45,
+                  }, 
+                  {
+                      name : "实践性",
+                      data : 35,
+                  }, 
+                  {
+                      name : "签到少",
+                      data : 85,
+                  }
+              ]
+          },{
+              "courseNo" : "003",
+              "courseName" : "计算机动画/许捷",
+              "courseDesc" : "教你学会计算机动画",
+              "courseType" : "艺术课",
+              "courseScore" : "9.4",
+              "evaluation" : [ 
+                  {
+                      name : "纯干货",
+                      data : 75,
+                  }, 
+                  {
+                      
+                      name : "给分高",
+                      data : 55,
+                  }, 
+                  {
+                      name : "实践性",
+                      data : 25,
+                  }, 
+                  {
+                      name : "签到少",
+                      data : 95,
+                  }
+              ]
+          },{
+              "courseNo" : "004",
+              "courseName" : "国画技法/李维红",
+              "courseDesc" : "教你学会国画技法",
+              "courseType" : "艺术课",
+              "courseScore" : "9.4",
+              "evaluation" : [ 
+                  {
+                      name : "纯干货",
+                      data : 95,
+                  }, 
+                  {
+                      
+                      name : "给分高",
+                      data : 95,
+                  }, 
+                  {
+                      name : "实践性",
+                      data : 95,
+                  }, 
+                  {
+                      name : "签到少",
+                      data : 95,
+                  }
+              ]
+          },{
+              "courseNo" : "005",
+              "courseName" : "导演制作/王强",
+              "courseDesc" : "教你学会导演制作",
+              "courseType" : "艺术课",
+              "courseScore" : "9.4",
+              "evaluation" : [ 
+                  {
+                      name : "纯干货",
+                      data : 95,
+                  }, 
+                  {
+                      
+                      name : "给分高",
+                      data : 95,
+                  }, 
+                  {
+                      name : "实践性",
+                      data : 95,
+                  }, 
+                  {
+                      name : "签到少",
+                      data : 95,
+                  }
+              ]
+          },{
+              "courseNo" : "006",
+              "courseName" : "场景设计/王伟",
+              "courseDesc" : "教你学会场景设计",
+              "courseType" : "艺术课",
+              "courseScore" : "9.3",
+              "evaluation" : [ 
+                  {
+                      name : "纯干货",
+                      data : 45,
+                  }, 
+                  {
+                      
+                      name : "给分高",
+                      data : 35,
+                  }, 
+                  {
+                      name : "实践性",
+                      data : 25,
+                  }, 
+                  {
+                      name : "签到少",
+                      data : 15,
+                  }
+              ]
+          }
+          
+        ],
+
     // swiper
     activities:['../resources/activities/activity-1.jpg', '../resources/activities/activity-2.jpg', '../resources/activities/activity-3.jpg', '../resources/activities/activity-4.jpg'],
     indicatorDots: true,
@@ -9,39 +166,51 @@ Page({
     interval: 2000,
     duration: 500,
 
-    // list 
-    list: [
-        {
-          id: 'view',
-          title: '课程名称/老师',
-          content: 'xxxxxxxxx',
-          otherInfo: '其它的什么信息',
-          open: false,
-          pages: ['view', 'scroll-view', 'swiper']
-        }, {
-          id: 'view',
-          title: '课程名称/老师',
-          content: 'yyyyyyyyyyyyyyy',
-          otherInfo: '其它的什么信息',
-          open: false,
-          pages: ['view', 'scroll-view', 'swiper']
-        },{
-          id: 'view',
-          title: '课程名称/老师',
-          content: 'zzzzzzzzzzzzzzz',
-          otherInfo: '其它的什么信息',
-          open: false,
-          pages: ['view', 'scroll-view', 'swiper']
-        }
-      ],
-
-      // 模态
-    colleges: ['软件与微电子学院', '数学学院', '物理学院'],
-    majors: ['大数据与云计算', '软件工程技术', '机器学习'],
+    // 模态
+    collegeIndex: 0,
+    majorIndex: 0,
+    colleges: ['软件与微电子学院', '数学科学学院','物理学院', '化学与分子工程学院', '生命科学学院', '城市与环境学院', '地球与空间科学学院',
+     ,'心理与认知科学学院', '建筑与景观设计学院', '信息科学技术学院', '工学院', '环境科学与工程学院', '计算机科学技术研究所',],
+    majors: ['大数据与云计算', '软件工程技术', '机器学习', '人工智能', '系统软件', '应用软件开发'],
     inputShowed: false,
     inputVal: "",
   }, 
+ 
+  onShow: function () {
+    // 请求课程数据
+    wx.request({
+      url: '127.0.0.1', 
+      data: {
+       
+      },
+      header: {
+          'content-type': 'application/json'
+      },
+      success: function(res) {
+        console.log(res.data)
+      },
+      fail: function(res) {
+        
+      }
+    })
+  },
 
+  // pull refresh
+  onPullDownRefresh: function () {
+    wx.showToast({
+      title: 'loading...',
+      icon: 'loading'
+    })
+    console.log('onPullDownRefresh', new Date())
+  },
+  stopPullDownRefresh: function () {
+    wx.stopPullDownRefresh({
+      complete: function (res) {
+        wx.hideToast()
+        console.log(res, new Date())
+      }
+    })
+  },
 
   // swiper
   changeIndicatorDots: function (e) {
@@ -195,8 +364,10 @@ Page({
   
   // noteGraph
   noteGraph: function(e) {
+    var evaluation = e.currentTarget.dataset.evaluation;
+
     wx.navigateTo({
-      url: '../vote-graph/vote-graph'
+      url: '../vote-graph/vote-graph?evaluation=' + JSON.stringify(evaluation)
     });
   }
 });

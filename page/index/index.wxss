@@ -32,6 +32,21 @@
 }
 
 /* class list */
+.class-list-item-title {
+  font-family: SimHei;
+  font-size: 32rpx;
+}
+.class-list-item-content {
+  font-family: SimHei;
+  font-size: 28rpx;
+  color: #757373;
+}
+.evaluation-text {
+  font-family: SimHei;
+  font-size: 28rpx;
+  color: dodgerblue;
+}
+
 .evaluation-text {
   font-size: 12px;
 }
@@ -40,6 +55,7 @@
   width: 14px;
   height: 14px;
 }
+
 
 .college-btn {
   position: fixed;

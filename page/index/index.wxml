@@ -54,25 +54,15 @@
     <!-- class list -->
     <view class="index-bd">
         <view class="kind-list">
-        <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+        <block wx:for-items="{{courses}}" wx:key="{{item.courseNo}}">
             <view class="kind-list-item">
-            <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}">
+            <view id="{{item.courseNo}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="noteGraph" data-evaluation="{{item.evaluation}}">
                 <view class="kind-list-text">
-                    <text class="class-list-item-title">{{item.title}}</text>
-                    <text class="class-list-item-content">\n{{item.content}}</text>
+                    <text class="class-list-item-title">{{item.courseName}}</text>
+                    <text class="class-list-item-content">\n{{item.courseDesc}}</text>
                 </view>
-                <view class="evaluation-text" bindtap="noteGraph" >综合评价</view>
+                <view class="evaluation-text">综合评价</view>
                 <image class="kind-list-img" src="../resources/kind/logo.png"></image>
-            </view>
-            <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
-                <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
-                <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
-                    <navigator url="../component/pages/{{page}}/{{page}}" class="navigator">
-                    <view class="navigator-text">{{page}}</view>
-                    <view class="navigator-arrow"></view>
-                    </navigator>
-                </block>
-                </view>
             </view>
             </view>
         </block>

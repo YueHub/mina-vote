@@ -1,31 +1,32 @@
-<import src="../common/head.wxml" />
-<import src="../common/foot.wxml" />
+<import src="../common/head.wxml"/>
+<import src="../common/foot.wxml"/>
 
+<view class="container">
+  
 
-<view class="page">
-
-    <!-- list -->
-    <view class="index-bd">
-    <view class="kind-list">
-      <block wx:for-items="{{list}}" wx:key="{{item.id}}">
-        <view class="kind-list-item">
-          <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
-            <view class="kind-list-text">{{item.name}}</view>
-            <image class="kind-list-img" src="resources/kind/{{item.id}}.png"></image>
-          </view>
-          <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
-            <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
-              <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
-                <navigator url="../component/pages/{{page}}/{{page}}" class="navigator">
-                  <view class="navigator-text">{{page}}</view>
-                  <view class="navigator-arrow"></view>
-                </navigator>
-              </block>
-            </view>
-          </view>
+  <form class="page-body" bindsubmit="submitForm" report-submit="true">
+    <view class="weui-cells__title">点击提交，发送示例模板消息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">学院</view>
         </view>
-      </block>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="text" disabled="{{true}}" value="{{formData.address}}" name="address"></input>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">专业</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="text" disabled="{{true}}" value="{{formData.time}}" name="time"></input>
+        </view>
+      </view>
     </view>
-  </view>
+    <view class="btn-area">
+      <button type="primary" size="40" formType="submit" loading="{{loading}}">保存</button>
+    </view>
+  </form>
 
 </view>
