@@ -3,10 +3,8 @@
 var app = getApp()
 
 const formData = {
-  address: 'T.I.T 造舰厂',
-  time: '2017.01.09',
-  name: '帝国歼星舰',
-  serial: '123456789'
+  college: '软件与微电子学院',
+  profession: '软件工程技术'
 }
 
 Page({

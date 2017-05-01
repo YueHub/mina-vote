@@ -5,14 +5,14 @@
   
 
   <form class="page-body" bindsubmit="submitForm" report-submit="true">
-    <view class="weui-cells__title">点击提交，发送示例模板消息</view>
+    <view class="weui-cells__title">个人信息</view>
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
         <view class="weui-cell__hd">
           <view class="weui-label">学院</view>
         </view>
         <view class="weui-cell__bd">
-          <input class="weui-input" type="text" disabled="{{true}}" value="{{formData.address}}" name="address"></input>
+          <input class="weui-input" type="text" disabled="{{true}}" value="{{formData.college}}" name="address"></input>
         </view>
       </view>
       <view class="weui-cell weui-cell_input">
@@ -20,7 +20,7 @@
           <view class="weui-label">专业</view>
         </view>
         <view class="weui-cell__bd">
-          <input class="weui-input" type="text" disabled="{{true}}" value="{{formData.time}}" name="time"></input>
+          <input class="weui-input" type="text" disabled="{{true}}" value="{{formData.profession}}" name="time"></input>
         </view>
       </view>
     </view>

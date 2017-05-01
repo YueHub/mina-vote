@@ -5,21 +5,27 @@
             <view class="weui-form-preview__hd">
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">课程名称/老师:</view>
-                    <view class="weui-form-preview__value_in-hd"><input style="border:1px;" type="text"/></view>
+                    <view class="weui-form-preview__label"><input style="margin-top: 6px;" type="text" placeholder="请输入课程/老师"/></view>
                 </view>
             </view>
+            <block wx:for="{{options}}" wx:key="{{item}}">
+                <view class="weui-form-preview__bd">
+                    <view class="weui-form-preview__item">
+                        <view class="weui-form-preview__label">{{item}}</view>
+                    </view>
+                </view>
+            </block>
             <view class="weui-form-preview__bd">
                 <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">纯干货</view>
+                    <view class="weui-form-preview__label"><input bindinput="bindKeyInput" value="{{option}}" type="text" placeholder="请输入评价"/></view>
                 </view>
             </view>
             <view class="weui-form-preview__ft">
-                <navigator url="" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">新增评价</navigator>
+                <view bindtap="addOption" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">添加评价</view>
             </view>
         </view>
     </view>
 </view>
-
 
     <view class="page-section">
       <view class="page-section-title">推荐展示样式</view>
