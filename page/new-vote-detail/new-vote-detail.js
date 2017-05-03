@@ -97,7 +97,7 @@ Page({
             // success
             console.log("投票添加成功")
             wx.showToast({
-                title: '添加成功 2秒后跳转首页',
+                title: '添加成功（可在首页查看）',
                 icon: 'success',
                 duration: 2000
             })
