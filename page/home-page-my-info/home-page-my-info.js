@@ -2,16 +2,58 @@
 
 var app = getApp()
 
-const formData = {
-  college: '软件与微电子学院',
-  profession: '软件工程技术'
-}
-
 Page({
-  onLoad: function() {
+  data: {
+    myUserInfo: null,
+    hasLogin: false
+  },
+
+  updateUserInfo: function(myUserInfo) {
     this.setData({
-      formData
+      myUserInfo: myUserInfo
     })
+  },
+
+  onLoad: function() {
+    this.getUserInfo();
+    app.getUserInfo(this.updateUserInfo);
+    this.setData({
+      hasLogin: app.globalData.hasLogin
+    })
+    this.getUserInfo();
+  },
+  onShow: function() {
+    this.getUserInfo();
+    app.getUserInfo(this.updateUserInfo);
+    this.setData({
+      hasLogin: app.globalData.hasLogin
+    })
+    this.getUserInfo();
+  },
+
+  // get the user info 
+  getUserInfo: function () {
+    var that = this
+
+    if (app.globalData.hasLogin === false) {
+      wx.login({
+        success: _getUserInfo
+      })
+    } else {
+      _getUserInfo()
+    }
+
+    function _getUserInfo() {
+      wx.getUserInfo({
+        success: function (res) {
+          that.setData({
+            hasUserInfo: true,
+            userInfo: res.userInfo
+          })
+          that.update()
+        }
+      })
+    }
   },
 
   submitForm: function(e) {

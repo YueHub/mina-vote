@@ -54,7 +54,7 @@
     <!-- class list -->
     <view class="index-bd">
         <view class="kind-list">
-        <block wx:for-items="{{courses}}" wx:key="{{item.courseNo}}">
+        <block wx:for-items="{{courseInfos}}" wx:key="{{item.courseNo}}">
             <view class="kind-list-item">
             <view id="{{item.courseNo}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="noteGraph" data-evaluation="{{item.evaluation}}">
                 <view class="kind-list-text">
@@ -106,8 +106,21 @@
                     </view>
                 </view>
             </view>
+
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">学号</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <view class="weui-input">
+                            <input bindinput="bindNoInputChange" class="no-input" type="text" value="" />
+                        </view>
+                    </view>
+                </view>
+            </view>
         </view>
-        <view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>
+        <view class="btn_ok" bindtap="powerDrawer" data-click="true" data-statu="close">确定</view>
     </view>
 
     </view> 

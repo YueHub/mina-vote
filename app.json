@@ -1,6 +1,5 @@
 {
   "pages": [
-   
     "page/index/index",
     "page/index-class-select-main/index-class-select-main",
     "page/vote-graph/vote-graph",
@@ -9,11 +8,10 @@
     "page/home-page-my-vote/home-page-my-vote",
     "page/new-vote/new-vote",
     "page/new-vote-detail/new-vote-detail"
-  
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "演示",
+    "navigationBarTitleText": "选课投票",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
