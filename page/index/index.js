@@ -33,7 +33,7 @@ Page({
     // 获取课程信息
     app.getCourseInfos(this.updateCourseInfos)
     
-    // 请求课程数据
+    // TODO 通过网络获取 课程数据
     wx.request({
       url: '127.0.0.1', 
       data: {

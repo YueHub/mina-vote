@@ -12,8 +12,8 @@ Page({
     coursesSet1: [
           {
               "courseNo" : "001",
-              "courseName" : "用户体验设计/陈妍",
-              "courseDesc" : "腾讯传奇部门CDC倾情传授",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "xxxxx倾情传授",
               "courseType" : "艺术课",
               "courseScore" : "9.5",
               "evaluation" : [ 
@@ -40,8 +40,8 @@ Page({
   coursesSet2: [
           {
               "courseNo" : "001",
-              "courseName" : "用户体验设计/陈妍",
-              "courseDesc" : "腾讯传奇部门CDC倾情传授",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "xxxxx传授",
               "courseType" : "艺术课",
               "courseScore" : "9.5",
               "evaluation" : [ 
@@ -65,8 +65,8 @@ Page({
               ]
           }, {
               "courseNo" : "002",
-              "courseName" : "动漫欣赏与实践/王伟",
-              "courseDesc" : "教你学会动漫欣赏",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "教你学会xxxxx",
               "courseType" : "艺术课",
               "courseScore" : 9.4,
               "evaluation" : [ 
@@ -93,8 +93,8 @@ Page({
   coursesSet3: [
           {
               "courseNo" : "001",
-              "courseName" : "用户体验设计/陈妍",
-              "courseDesc" : "腾讯传奇部门CDC倾情传授",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "xxxxx倾情传授",
               "courseType" : "艺术课",
               "courseScore" : "9.5",
               "evaluation" : [ 
@@ -118,8 +118,8 @@ Page({
               ]
           }, {
               "courseNo" : "002",
-              "courseName" : "动漫欣赏与实践/王伟",
-              "courseDesc" : "教你学会动漫欣赏",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "教你学会xxxxx",
               "courseType" : "艺术课",
               "courseScore" : 9.4,
               "evaluation" : [ 
@@ -143,8 +143,8 @@ Page({
               ]
           },{
               "courseNo" : "003",
-              "courseName" : "计算机动画/许捷",
-              "courseDesc" : "教你学会计算机动画",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "教你学会xxxxx",
               "courseType" : "艺术课",
               "courseScore" : "9.4",
               "evaluation" : [ 
@@ -171,8 +171,8 @@ Page({
     coursesSet4: [
           {
               "courseNo" : "001",
-              "courseName" : "用户体验设计/陈妍",
-              "courseDesc" : "腾讯传奇部门CDC倾情传授",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "xxxxx倾情传授",
               "courseType" : "艺术课",
               "courseScore" : "9.5",
               "evaluation" : [ 
@@ -196,8 +196,8 @@ Page({
               ]
           }, {
               "courseNo" : "002",
-              "courseName" : "动漫欣赏与实践/王伟",
-              "courseDesc" : "教你学会动漫欣赏",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "教你学会xxxxx",
               "courseType" : "艺术课",
               "courseScore" : 9.4,
               "evaluation" : [ 
@@ -221,8 +221,8 @@ Page({
               ]
           },{
               "courseNo" : "003",
-              "courseName" : "计算机动画/许捷",
-              "courseDesc" : "教你学会计算机动画",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "教你学会xxxxx",
               "courseType" : "艺术课",
               "courseScore" : "9.4",
               "evaluation" : [ 
@@ -246,8 +246,8 @@ Page({
               ]
           },{
               "courseNo" : "004",
-              "courseName" : "国画技法/李维红",
-              "courseDesc" : "教你学会国画技法",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "教你学会xxxxx",
               "courseType" : "艺术课",
               "courseScore" : "9.4",
               "evaluation" : [ 
@@ -271,8 +271,8 @@ Page({
               ]
           },{
               "courseNo" : "005",
-              "courseName" : "导演制作/王强",
-              "courseDesc" : "教你学会导演制作",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "教你学会xxxxx",
               "courseType" : "艺术课",
               "courseScore" : "9.4",
               "evaluation" : [ 
@@ -299,8 +299,8 @@ Page({
     coursesSet5: [
           {
               "courseNo" : "001",
-              "courseName" : "用户体验设计/陈妍",
-              "courseDesc" : "腾讯传奇部门CDC倾情传授",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "xxxxx倾情传授",
               "courseType" : "艺术课",
               "courseScore" : "9.5",
               "evaluation" : [ 
@@ -324,8 +324,8 @@ Page({
               ]
           }, {
               "courseNo" : "002",
-              "courseName" : "动漫欣赏与实践/王伟",
-              "courseDesc" : "教你学会动漫欣赏",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "教你学会xxxxx",
               "courseType" : "艺术课",
               "courseScore" : 9.4,
               "evaluation" : [ 
@@ -349,8 +349,8 @@ Page({
               ]
           },{
               "courseNo" : "003",
-              "courseName" : "计算机动画/许捷",
-              "courseDesc" : "教你学会计算机动画",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "教你学会xxxxx",
               "courseType" : "艺术课",
               "courseScore" : "9.4",
               "evaluation" : [ 
@@ -374,8 +374,8 @@ Page({
               ]
           },{
               "courseNo" : "004",
-              "courseName" : "国画技法/李维红",
-              "courseDesc" : "教你学会国画技法",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "教你学会xxxxx",
               "courseType" : "艺术课",
               "courseScore" : "9.4",
               "evaluation" : [ 
@@ -399,8 +399,8 @@ Page({
               ]
           },{
               "courseNo" : "005",
-              "courseName" : "导演制作/王强",
-              "courseDesc" : "教你学会导演制作",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "教你学会xxxxx",
               "courseType" : "艺术课",
               "courseScore" : "9.4",
               "evaluation" : [ 
@@ -424,8 +424,8 @@ Page({
               ]
           },{
               "courseNo" : "006",
-              "courseName" : "场景设计/王伟",
-              "courseDesc" : "教你学会场景设计",
+              "courseName" : "xxxxxx/xx",
+              "courseDesc" : "教你学会xxxxx",
               "courseType" : "艺术课",
               "courseScore" : "9.3",
               "evaluation" : [ 
